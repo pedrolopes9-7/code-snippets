@@ -1,7 +1,7 @@
-# poll-code-snippets
-Linkedin Polls Code Snippets 
+# code-snippets
+Code Snippets 
 
-Repository to store Java and Spring related code snippets via Polls in Linkedin.
+Repository to store Java and Spring related code snippets for questions and answers
 
 Follow me if you're interested in such content: https://www.linkedin.com/in/pedro-lopes-dev/
 
