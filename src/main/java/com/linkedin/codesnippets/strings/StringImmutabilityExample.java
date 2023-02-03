@@ -1,7 +1,6 @@
 package com.linkedin.codesnippets.strings;
 
 /*@author: pedrolopesdev at 2023-02-02
- Follow for more tips:
  https://www.linkedin.com/in/pedro-lopes-dev//
  https://twitter.com/pedro_lopes3
  https://pedrolopesdev.com */
@@ -11,7 +10,7 @@ public class StringImmutabilityExample {
       - Strings are immutable, so trying to modify `hello` using `concat` doesn't work like on line `28`.
          Thus, line `35` prints false.
       - The `equals` method compares the content of two String objects.
-         Thus, lines `36` and `37` prints true.
+         Thus, lines `36` prints true.
       - The `==` operator compares the objects' addresses, not their content. Using `new String()` and `new StringBuilder()` instantiates new addresses in memory.
          Therefore, lines `38` and `39` print false.
       - The particular case for the `==` operator is when the two Strings are created using double quotes, aka literals.
@@ -33,7 +32,6 @@ public class StringImmutabilityExample {
         String helloWorld4 = "Hello World";
 
         System.out.println(hello.equals(helloWorld1)); // false
-        System.out.println(helloWorld1.equals(helloWorld2)); // true
         System.out.println(helloWorld3.equals(helloWorld1)); //true
         System.out.println(helloWorld1 == helloWorld2); // false
         System.out.println(helloWorld3 == helloWorld2); //false
