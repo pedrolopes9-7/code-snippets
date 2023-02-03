@@ -8,13 +8,13 @@ public class StringImmutabilityExample {
 
     /* Explanation: We should use core concepts of Java String to answer this question:
       - Strings are immutable, so trying to modify `hello` using `concat` doesn't work like on line `28`.
-         Thus, line `35` prints false.
+         Thus, line `34` prints false.
       - The `equals` method compares the content of two String objects.
-         Thus, lines `36` prints true.
+         Thus, lines `35` prints true.
       - The `==` operator compares the objects' addresses, not their content. Using `new String()` and `new StringBuilder()` instantiates new addresses in memory.
-         Therefore, lines `38` and `39` print false.
+         Therefore, lines `36` and `37` print false.
       - The particular case for the `==` operator is when the two Strings are created using double quotes, aka literals.
-         In that case, the String Pool assigns the same memory address to both variables. Thus, line `40` prints true. */
+         In that case, the String Pool assigns the same memory address to both variables. Thus, line `38` prints true. */
 
     /* Check out useful resources:
      https://pedrolopesdev.com/post/java-string-pool
