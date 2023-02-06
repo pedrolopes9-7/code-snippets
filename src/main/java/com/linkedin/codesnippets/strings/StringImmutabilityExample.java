@@ -6,20 +6,16 @@ package com.linkedin.codesnippets.strings;
  https://pedrolopesdev.com */
 public class StringImmutabilityExample {
 
-    /* Explanation: We should use core concepts of Java String to answer this question:
-      - Strings are immutable, so trying to modify `hello` using `concat` doesn't work like on line `28`.
-         Thus, line `34` prints false.
-      - The `equals` method compares the content of two String objects.
-         Thus, lines `35` prints true.
-      - The `==` operator compares the objects' addresses, not their content. Using `new String()` and `new StringBuilder()` instantiates new addresses in memory.
-         Therefore, lines `36` and `37` print false.
-      - The particular case for the `==` operator is when the two Strings are created using double quotes, aka literals.
-         In that case, the String Pool assigns the same memory address to both variables. Thus, line `38` prints true. */
+    /* Question: What is the output for lines 1,2,3,4,5 respectively?
+        A) false true false false true
+        B) true true false false true
+        C) true true false false false
+        D) false true false false false
 
-    /* Check out useful resources:
-     https://pedrolopesdev.com/post/java-string-pool
-     https://pedrolopesdev.com/post/string-concatenation-in-java/ */
 
+     Check out useful resources for this question at:
+      https://pedrolopesdev.com/post/java-string-pool
+      https://pedrolopesdev.com/post/string-concatenation-in-java/ */
 
     public static void main(String[] args) {
         String hello = "Hello";
@@ -37,4 +33,16 @@ public class StringImmutabilityExample {
         System.out.println(helloWorld3 == helloWorld2); //false
         System.out.println(helloWorld1 == helloWorld4); // true
     }
+
+    /*
+    Explanation: We should use core concepts of Java String to answer this question:
+      - Strings are immutable, so trying to modify `hello` using `concat` doesn't work like on line `28`.
+         Thus, line `34` prints false.
+      - The `equals` method compares the content of two String objects.
+         Thus, lines `35` prints true.
+      - The `==` operator compares the objects' addresses, not their content. Using `new String()` and `new StringBuilder()` instantiates new addresses in memory.
+         Therefore, lines `36` and `37` print false.
+      - The particular case for the `==` operator is when the two Strings are created using double quotes, aka literals.
+         In that case, the String Pool assigns the same memory address to both variables. Thus, line `38` prints true.
+     */
 }
