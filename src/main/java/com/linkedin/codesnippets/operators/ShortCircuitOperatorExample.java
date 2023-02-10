@@ -38,7 +38,7 @@ public class ShortCircuitOperatorExample {
 }
     /*
         Explanation:
-        The program doesn't throw any exception and prints out `Printing output...`.
+        The program doesn't throw any exception and prints out `First Number: 2`.
 
         The answer is to understand that logical OR (||) short circuits when `true`, whereas logical AND (&&) short circuits when `false`
 
