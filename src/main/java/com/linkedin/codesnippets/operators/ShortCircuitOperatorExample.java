@@ -25,11 +25,11 @@ public class ShortCircuitOperatorExample {
             myList = List.of(2, 3);
         }
 
-        if (isEven(myList.get(1)) && myList.contains(3) && isEven(myList.get(3))) { //2
+        if (isEven(myList.get(0)) && myList.contains(4) && isEven(myList.get(3))) { //2
             myList = null;
         }
 
-        System.out.println("First number: " + myList.get(0)); //3
+        System.out.println("First number: " + myList.get(0)); //3.
     }
 
     private static boolean isEven(int number) {
