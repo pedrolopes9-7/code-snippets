@@ -16,14 +16,15 @@ import java.util.stream.IntStream;
         D) None of the above
 
         More Resources:
-        https://pedrolopesdev.com/post/deadlock-livelock-starvation-in-java/
         https://pedrolopesdev.com/post/create-thread-runnable-in-java/
+        https://docs.oracle.com/javase/tutorial/collections/streams/parallelism.html
+        https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/atomic/AtomicLong.html
      */
 public class ThreadConcurrentVariableModification {
 
     static long value1 = 10;
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         var value2 = new AtomicLong(0);
         final long[] value3 = {0};
         final long[] value4 = {0};
@@ -44,6 +45,7 @@ public class ThreadConcurrentVariableModification {
 
 /*
 The answer is None of the above.
+
 Explanation:
 Line 1 modifies the value of a global static variable in a parallel stream. Static variables are not atomic,
     so we can't guarantee that the numbers are incremented in the correct order. Thus, we can expect any result.
