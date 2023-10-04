@@ -1,6 +1,7 @@
 package com.linkedin.codesnippets.datetime;
 
 import java.time.*;
+import java.util.ArrayList;
 import java.util.Date;
 
 // In Los Angeles Time Zone, Daylight Saving Time began at: March 12, 2023 02:00.
@@ -12,13 +13,18 @@ import java.util.Date;
 
 public class DatesExample {
     public static void main(String[] args) {
-        Date date = new Date(2023, 3, 12); // creates the date March 12, 2023
-        LocalTime localTime = LocalTime.of(0001, 59, 59); //1 -> creates the time 01:59:59
-        LocalDateTime localDateTime = LocalDateTime.of(date, localTime);
-        ZonedDateTime dateBeforeDST = ZonedDateTime.of(localDateTime, ZoneId.of("America/Los_Angeles"));
+//        Date date = new Date(2023, 3, 12); // creates the date March 12, 2023
+//        LocalTime localTime = LocalTime.of(0001, 59, 59); //1 -> creates the time 01:59:59
+//        LocalDateTime localDateTime = LocalDateTime.of(date, localTime);
+//        ZonedDateTime dateBeforeDST = ZonedDateTime.of(localDateTime, ZoneId.of("America/Los_Angeles"));
+//
+//        LocalDateTime dateAfterDST = dateBeforeDST.plusSeconds(1).toLocalDateTime();
+//        System.out.println(dateAfterDST);
 
-        LocalDateTime dateAfterDST = dateBeforeDST.plusSeconds(1).toLocalDateTime();
-        System.out.println(dateAfterDST);
+            var a = new int[]{ 1, 2, 3, 4 };
+            int[] b = { 2, 3, 1, 0 };
+            System.out.println( a [ (a = b)[3] ] );
+
     }
 }
 

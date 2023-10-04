@@ -1,5 +1,12 @@
 package com.linkedin.codesnippets.operators;
 
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
 
 /*@author: pedrolopesdev at 2023-02-10
@@ -18,7 +25,11 @@ import java.util.List;
         https://pedrolopesdev.com/post/short-circuit-operators-in-java/
      */
 public class ShortCircuitOperatorExample {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+
+        Path path = Paths.get("ShortCircuitOperatorExample.java");
+        try (BufferedReader reader = Files.newBufferedReader(path)) {
+        }
         List<Integer> myList = null;
 
         if (isEven(10) || myList.get(0) == 2 || myList.get(1) == 4) { //1
